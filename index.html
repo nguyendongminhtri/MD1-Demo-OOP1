@@ -9,7 +9,7 @@
 <script>
     document.write('<h1>--------------Tính Chất của OOP-----------------</h1>')
     document.write('<h1>--------------4 Anh Em I Phở -----------------</h1>')
-    document.write('<h2>--------------1> Abstraction (Tính Trừu Tượng)-----------------</h2>')
+    document.write('<h2>--------------1> Abstraction (Tính Trừu Tượng) che giấu đi những phương thức không cần thiết thông qua throw new Error-----------------</h2>')
     //XÂY DỰNG CLASS OOP THEO ES6
     class Student {
         id;
@@ -45,7 +45,9 @@
             this.age = age;
         }
 
-
+toString(){
+            throw new Error('Bỏ đi')
+}
     }
    student1 = new Student(1,'Minh',18);
 
@@ -61,7 +63,7 @@
     studentList.push(student1);
     studentList.push(student2)
     console.log('listStudent === ', studentList)
-    document.write('<h2>--------------2> Encapsulation (Tính Bao gói)-----------------</h2>')
+    document.write('<h2>--------------3> Polymorphism (Tính Đa hình - Cùng 1 phương thức nhưng thể hiện khác nhau)-----------------</h2>')
     class Dog {
         say(){
             console.log('Gâu Gâu')
@@ -79,7 +81,7 @@
     cat = new Cat();
     tiengKeu(dog);
     tiengKeu(cat)
-    document.write('<h2>--------------3> Inheritance (Kế Thừa)-----------------</h2>')
+    document.write('<h2>--------------3> Inheritance (Kế Thừa) Con thừa hưởng phương thức thuộc tính của cha-----------------</h2>')
     class Parent {
         phuongThucCuaCha(){
             console.log('Có phải con của bố không?')
